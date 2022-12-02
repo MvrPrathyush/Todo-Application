@@ -1,0 +1,64 @@
+### Returns a list of all todos whose status is 'TO DO'
+GET http://localhost:3000/todos/?status=TO%20DO
+
+
+### Returns a list of all todos whose priority is 'HIGH'
+GET http://localhost:3000/todos/?priority=MEDIUM
+
+
+
+###Returns a list of all todos whose priority is 'HIGH' and status is 'IN PROGRESS
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS 
+
+
+### search 
+GET http://localhost:3000/todos/?search_q=Clean
+
+
+
+
+###
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+
+
+###
+GET http://localhost:3000/todos/?category=HOME
+
+
+### Category and priority
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+
+
+
+
+###based on toodo ID 
+GET http://localhost:3000/todos/6/
+
+
+
+###
+GET http://localhost:3000/agenda/?date=2020-09-22 
+
+
+
+###update todo 
+PUT http://localhost:3000/todos/2/
+Content-Type: application/json
+
+{ "status": "DONE" }
+
+
+
+###post todo 
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+ "id": 7,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-02-22"
+}
